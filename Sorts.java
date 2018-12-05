@@ -1,4 +1,4 @@
-public class SelectionSorts{
+public class Sorts{
   public static void swap(int[] ary,int a,int b){
     int h1=ary[a];
     int h2=ary[b];
