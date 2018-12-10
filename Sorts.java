@@ -5,19 +5,19 @@ public class Sorts{
     ary[a]=h2;
     ary[b]=h1;
   }
-  public static void selectionsort(int [] ary){
+  public static void selectionSort(int [] ary){
     for(int i=0;i<ary.length;i++){
       for(int j=i;j<ary.length;j++){
         if(ary[i]>ary[j])swap(ary,i,j);
       }
     }
   }
-  public int[] bubblesort(int[] ary){
+  public static int[] bubbleSort(int[] ary){
 	  int current=0;
 	  int next=0;
 	  Boolean sorted=false;
-  	Boolean swap=false;
-  	while(sorted){
+  	  Boolean swap=false;
+  	while(!sorted){
 	  	for(int i=0;i<ary.length-1;i++){
 	  		current=ary[i];
 	  		next=ary[i+1];
@@ -33,9 +33,9 @@ public class Sorts{
   }
   public static void main(String[] args){
     int [] ary={5,6,9,8,2,4,6,3,2,89647,32,0};
-    selectionsort(ary);
+    selectionSort(ary);
     for(int i=0;i<ary.length;i++){
       System.out.println(""+ary[i]);
     }
   }
-  }
+}
