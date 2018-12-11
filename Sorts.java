@@ -1,4 +1,12 @@
+import java.util.ArrayList;
 public class Sorts{
+  public static void insert(ary,current,new){
+    int tobeinserted=ary[current];
+    for(int i= current; i>new;i--){
+      ary[i]=ary[i-1];
+    }
+    ary[new]=tobeinserted;
+  }
   public static void swap(int[] ary,int a,int b){
     int h1=ary[a];
     int h2=ary[b];
@@ -15,25 +23,34 @@ public class Sorts{
   public static int[] bubbleSort(int[] ary){
 	  int current=0;
 	  int next=0;
-	  Boolean sorted=false;
-  	  Boolean swap=false;
-  	while(!sorted){
+  	Boolean swap=true;
+  	while(swap){
+      swap=false;
 	  	for(int i=0;i<ary.length-1;i++){
 	  		current=ary[i];
 	  		next=ary[i+1];
 		  	if(current>next){
 		    	ary[i]=next;
 		    	ary[i+1]=current;
-		    	swap=true;
+          swap=true;
 		  	}
 		  }
-		  sorted=!swap;
  	}
 	return ary;
   }
+  public static int[] insertionSort(int[] ary){
+    int sortindex=0;
+    int smallest;
+    for(int i=0;)
+    while(sortindex<ary.length){
+      for(int i=sortindex;i>-1sortindex;i--){
+        if(ary[i]>ary[i-1])insert
+      }
+    }
+  }
   public static void main(String[] args){
     int [] ary={5,6,9,8,2,4,6,3,2,89647,32,0};
-    selectionSort(ary);
+    bubbleSort(ary);
     for(int i=0;i<ary.length;i++){
       System.out.println(""+ary[i]);
     }
