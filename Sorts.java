@@ -1,11 +1,4 @@
 public class Sorts{
-//  public static void insert(ary,current,new){
-  //  int tobeinserted=ary[current];
-  //  for(int i= current; i>new;i--){
-    //  ary[i]=ary[i-1];
-    //}
-    //ary[new]=tobeinserted;
-  //}
   public static void swap(int[] ary,int a,int b){
     int h1=ary[a];
     int h2=ary[b];
@@ -36,12 +29,11 @@ public class Sorts{
 		  }
   }}
   public static void insertionSort(int[] ary){
-  }
-  public static void main(String[] args){
-    int [] ary={5,6,9,8,2,4,6,3,2,89647,32,0};
-    bubbleSort(ary);
-    for(int i=0;i<ary.length;i++){
-      System.out.println(""+ary[i]);
+    for(int i=1;i<ary.length;i++){
+      Boolean rightplace=false;
+      for(int j=i;!rightplace && j>0;j--){
+        if(ary[j]<ary[j-1])swap(ary,j,j-1);
+        else rightplace=true;
+      }
     }
-  }
-}
+  }}
